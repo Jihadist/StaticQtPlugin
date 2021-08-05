@@ -53,7 +53,7 @@ else()
 endif()
 
 message(STATUS ${PLUGS})
-target_link_directories(untitled11 PRIVATE "/home/user/.conan/data/qt/6.1.1/_/_/package/1d0e0e9bb6583630532e46787312fd3d003cbe3d/res/archdatadir/plugins/platforms")
-target_link_directories(untitled11 PRIVATE "/home/user/.conan/data/qt/6.1.1/_/_/package/1d0e0e9bb6583630532e46787312fd3d003cbe3d/lib")
-target_link_libraries(untitled11 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets  qxcb Qt${QT_VERSION_MAJOR}XcbQpa
+target_link_directories(untitled11 PRIVATE "${Qt6_RES_DIRS}/archdatadir/plugins/platforms")
+target_link_directories(untitled11 PRIVATE ${Qt6_Core_LIB_DIRS})
+target_link_libraries(untitled11 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets qxcb  Qt6XcbQpa  Qt${QT_VERSION_MAJOR}::Core
   )
